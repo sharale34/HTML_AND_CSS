@@ -1,1 +1,120 @@
-// Sample Flexbox HTML and CSS
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Flex Page</title>
+    <style>
+        body {
+            padding: 2em;
+        }
+
+        .headerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .footerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: lightgreen;
+            padding: 10px;
+        }
+
+        .mainContainer {
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .mainContentItem {
+            text-align: left;
+            background: deepskyblue;
+        }
+
+        article {
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+
+        .sideBarLeftItem {
+            background: gold;
+        }
+
+        .sideBarRightItem {
+            background: hotpink;
+        }
+
+        .sideBarItem {
+            flex: 1 0 0;
+            border: 0px solid green;
+        }
+
+        .mainContentItem {
+            flex: 3 0px;
+        }
+
+        .sideBarLeftItem {
+            order: 1;
+        }
+
+        .mainContentItem {
+            order: 2;
+        }
+
+        .sideBarRightItem {
+            order: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="headerContainer">
+        <h1>Header- Sample FlexBox Example</h1>
+    </header>
+    <div class="mainContainer">
+        <section class="mainContentItem">
+            <article>
+                <h2>First Article</h2>
+                <p>Association football, more commonly known as football or soccer, is a team sport played with a
+                    spherical ball between two teams of 11 players. It is played by approximately 250 million players in
+                    over 200 countries and dependencies, making it the world's most popular sport.</p>
+            </article>
+            <article>
+                <h2>Second Article</h2>
+                <p>Cricket is a sport that generates a broad range of reaction from sports fans. Among those who are a
+                    part of more action-packed athletic traditions, cricket is variously seen as a boring, tedious game.
+                    To its hundreds of millions of fans united in an intense global following, cricket is a truly
+                    international sport, one of immeasurable subtlety, sportsmanship, and athletic skill.</p>
+            </article>
+            <article>
+                <h2>Third Article</h2>
+                <p>Hockey is a sport in which two teams play against each other by trying to manoeuvre a ball or a puck
+                    into the opponent's goal using a hockey stick. There are many types of hockey such as bandy, field
+                    hockey, ice hockey and rink hockey.</p>
+                <p>In most of the world, the term hockey by itself refers to field hockey, while in Canada, the United
+                    States, Russia and most of Eastern and Northern Europe, the term usually refers to ice hockey.</p>
+            </article>
+        </section>
+        <SideBar class="sideBarItem sideBarLeftItem">
+            <div class="center">
+                <p>Left Side Bar</p>
+            </div>
+        </SideBar>
+        <SideBar class="sideBarItem sideBarRightItem">
+            <div class="center">
+                <p>Right Side Bar</p>
+            </div>
+        </SideBar>
+    </div>
+    <footer class="footerContainer">Footer</footer>
+</body>
+
+</html>
